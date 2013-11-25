@@ -4,15 +4,15 @@ AC_INIT([Xproto], [7.0.25],
 AM_INIT_AUTOMAKE([foreign dist-bzip2])
 
 # Require xorg-macros minimum of 1.12 for DocBook external references
-m4_ifndef([XORG_MACROS_VERSION],
-          [m4_fatal([must install xorg-macros 1.12 or later before running autoconf/autogen])])
-XORG_MACROS_VERSION(1.12)
-XORG_DEFAULT_OPTIONS
-XORG_ENABLE_SPECS
-XORG_WITH_XMLTO(0.0.22)
-XORG_WITH_FOP
-XORG_WITH_XSLTPROC
-XORG_CHECK_SGML_DOCTOOLS(1.8)
+#m4_ifndef([XORG_MACROS_VERSION],
+#          [m4_fatal([must install xorg-macros 1.12 or later before running autoconf/autogen])])
+#XORG_MACROS_VERSION(1.12)
+#XORG_DEFAULT_OPTIONS
+#XORG_ENABLE_SPECS
+#XORG_WITH_XMLTO(0.0.22)
+#XORG_WITH_FOP
+#XORG_WITH_XSLTPROC
+#XORG_CHECK_SGML_DOCTOOLS(1.8)
 
 AC_CONFIG_HEADERS([do-not-use-config.h])
 AC_CONFIG_HEADERS([Xfuncproto.h])
@@ -210,8 +210,9 @@ fi
 
 
 AC_CONFIG_FILES([Makefile
-           specs/Makefile
-           specs/SIAddresses/Makefile
            Xpoll.h
            xproto.pc])
+#specs/Makefile
+#specs/SIAddresses/Makefile
+
 AC_OUTPUT

@@ -1,4 +1,4 @@
-SUBDIRS=specs
+#SUBDIRS=specs
 
 xprotodir = $(includedir)/X11
 xproto_HEADERS = \
